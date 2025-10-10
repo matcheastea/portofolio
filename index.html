@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <div class="hero-header">
+       <div class="wrapper">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-a"></i>
+                <div class="logo-text">Al Nazira Sudirman</div>
+            </div>
+            <nav>
+                <div class="togglebtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="navlinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="https://www.linkedin.com/in/al-nazira-sudirman-6696b028b">Linkedin</a></li>
+                    <li><a href="https://github.com/matcheastea">GitHub</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <div class="hero-pic">
+                <img src="img/profile.jpg" alt="profile pic">
+            </div>
+            <div class="hero-text">
+                <h5>Hi I'm <span class="input">Data Science Enthusiast</span></h5>
+                <h1>Al Nazira Sudirman</h1>
+                <br>
+                <hr>
+                <br>
+                <p>
+                    I am a Diploma student of Information Systems at Telkom University who has a high motivation for a growth mindset, 
+                    a good attitude, and great enthusiasm for learning, especially in the field of Data Science. I am currently seeking new challenges and opportunities to contribute with high enthusiasm. I am a cheerful person, adaptable, and able to work both in a team or individually.
+                </p>
+                <div class="btn-group">
+                    <a href="img/cvalnazirasudirman.pdf" class="btn active" download>Download CV</a>
+                    <a href="mailto:alnazira36@gmail.com" class="btn active">Contact</a>
+                </div>
+
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/al-nazira-sudirman-6696b028b"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://instagram.com/alnaziras"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/matcheastea"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+       </div> 
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+        var links = document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classlist.toggle("open");         
+        })
+
+        var typed = new Typed(".input", {
+            strings: ["Data Science enthusiast", "Front End Enthusiast"],
+            typeSpeed: 70,
+            backSpeed: 55,
+            loop: true
+        })
+    </script>
+</body>
+</html>
