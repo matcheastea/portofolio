@@ -23,9 +23,7 @@
                 </div>
                 <ul class="navlinks">
                     <li><a href="index.html">Home</a></li>
-                    <br>
                     <li><a href="https://www.linkedin.com/in/al-nazira-sudirman-6696b028b">LinkedIn</a></li>
-                    <br>
                     <li><a href="https://github.com/matcheastea">GitHub</a></li>
                 </ul>
             </nav>
@@ -42,7 +40,8 @@
                 <br>
                 <p>
                     I am a Diploma student of Information Systems at Telkom University who has a high motivation for a growth mindset, 
-                    a good attitude, and great enthusiasm for learning, especially in the field of Data Science. I am currently seeking new challenges and opportunities to contribute with high enthusiasm. I am a cheerful person, adaptable, and able to work both in a team or individually.
+                    a good attitude, and great enthusiasm for learning, especially in the field of Data Science. I am currently seeking new challenges 
+                    and opportunities to contribute with high enthusiasm. I am a cheerful person, adaptable, and able to work both in a team or individually.
                 </p>
                 <div class="btn-group">
                     <a href="img/cvalnazirasudirman.pdf" class="btn active" download>Download CV</a>
@@ -58,6 +57,74 @@
         </div>
        </div> 
     </div>
+    <section class="modern-section">
+        <div class="wrapper">
+            <div class="section-block">
+                <h2 class="section-title">My Hobbies</h2>
+                <div class="hobby-grid">
+                    <article class="card reveal">
+                        <div class="card-icon"><i class="fa-solid fa-music"></i></div>
+                        <h3>Listening to Music</h3>
+                        <p>Music helps me focus and stay creative while studying.</p>
+                    </article>
+                    <article class="card reveal">
+                        <div class="card-icon"><i class="fa-solid fa-film"></i></div>
+                        <h3>Watching K-Drama</h3>
+                        <p>I enjoy immersing myself in different cultures and stories through K-Drama series.</p>
+                    </article>
+                    <article class="card reveal">
+                        <div class="card-icon"><i class="fa-solid fa-search"></i></div>
+                        <h3>Exploring new things</h3>
+                        <p>I love discovering new technologies, tools, and experiencce that broaden my perspective and creativity.</p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- organisation -->
+             <div class="section-block">
+                <div class="section-title">Experience</div>
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+
+                    <div class="timeline-item right reveal">
+                        <div class="timeline-card">
+                            <span class="timeline-year">Jan 2024 - Mar 2024</span>
+                            <h3>IT Internship</h3>
+                            <h4>PT Jotun Indonesia</h4>
+                            <p>Assisted in developing internal applications using Power Apps and Power Automate, supported archiving processes, 
+                            and built a tracking system to monitor and manage company issues more efficiently.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left reveal">
+                        <div class="timeline-card">
+                            <span class="timeline-year">2023-2024</span>
+                            <h3>Majelis Perwakilan Kelas SMK Fatahillah Cileungsi</h3>
+                            <h4>Chairman</h4>
+                            <p>Leading and managing class representatives to ensure effective communication and collaboration within the class.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right reveal">
+                        <div class="timeline-card">
+                            <span class="timeline-year">2022-2023</span>
+                            <h3>Majelis Perwakilan Kelas SMK Fatahillah Cileungsi</h3>
+                            <h4>Secretary</h4>
+                            <p>Responsible for managing organizational administration, recording meeting notes, 
+                            and ensuring all documents are well-organized to support MPK operations effectively</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left reveal">
+                        <div class="timeline-card">
+                            <span class="timeline-year">2022-2023</span>
+                            <h3>Paskibra Garda Nusantara SMK Fatahillah Cileungsi</h3>
+                            <h4>Secretary</h4>
+                            <p>Responsible for recording member attendance, managing correspondence, 
+                            and preparing proposals to support the team's activities and administration.</p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
     <script>
         var togglebtn = document.querySelector(".togglebtn");
@@ -75,6 +142,24 @@
             backSpeed: 55,
             loop: true
         })
+
+        window.addEventListener('scroll', reveal);
+
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+            for(var i = 0; i < reveals.length; i++){
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+
+                if(elementTop < windowHeight - elementVisible){
+                    reveals[i].classList.add('visible');
+                } else {
+                    reveals[i].classList.remove('visible');
+
+                }
+            }
+        }
     </script>
 </body>
 </html>
